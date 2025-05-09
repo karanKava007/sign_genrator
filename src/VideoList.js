@@ -18,6 +18,8 @@ import v0408_1 from './videos/Insiderz/0408(1).mp4';
 import Logo from './videos/Insiderz/Insiders-Logo.mp4';
 import Insiderz from './videos/Insiderz/Insiderz.mp4';
 import Insiderz2 from './videos/Insiderz/Insiderz2.mp4';
+import InsiderzRecape from './videos/Insiderz/Insiderz5-9.mp4';
+import PokeClub from './videos/French/FrenchPoke.mp4';
 
 // Cover Image Imports (.png format)
 import CoverDremfy from './cover/Dremfy.png';
@@ -39,7 +41,8 @@ import Cover0408_1 from './cover/Insiderz/0408(1).png';
 import CoverLogo from './cover/Insiderz/Insiders-Logo.png';
 import CoverInsiderz from './cover/Insiderz/Insiderz.png';
 import CoverInsiderz2 from './cover/Insiderz/Insiderz2.png';
-
+import CoverInsiderzRecape from './cover/Insiderz/InsiderzRecape.png'
+import PokeClubCover from './cover/French/PokeClub.png'
 
 
 const videos = [
@@ -62,6 +65,8 @@ const videos = [
     { id: 18, src: Logo, title: 'Insiders Logo', cover: CoverLogo },
     { id: 19, src: Insiderz, title: 'Insiderz', cover: CoverInsiderz },
     { id: 20, src: Insiderz2, title: 'Insiderz2', cover: CoverInsiderz2 },
+    { id: 21, src: PokeClub, title: 'InsiderzRecape', cover: PokeClubCover },
+    { id: 22, src: InsiderzRecape, title: 'PokeClub', cover: CoverInsiderzRecape },
 ];
 
 export default videos;

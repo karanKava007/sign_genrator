@@ -5,6 +5,7 @@ import india_flag from "../images/india_flag.png";
 import karan from "../images/Karan.jpg";
 import { AiFillMail, AiOutlineMail } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
+import editors from "../Editors";
 
 const Editor = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,18 +78,16 @@ const Editor = () => {
           🎬 Videos Made With
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all transform cursor-pointer shadow-lg shadow-indigo-500/50">
-            CapCut
-          </span>
-          <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all transform cursor-pointer shadow-lg shadow-teal-500/50">
-            VN Editor
-          </span>
-          <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all transform cursor-pointer shadow-lg shadow-orange-500/50">
-            Adobe Premiere Pro (Learning)
-          </span>
-          <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all transform cursor-pointer shadow-lg shadow-pink-500/50">
-            After Effects (Learning)
-          </span>
+          {editors.map(
+            ({ editorName, status, fromColor, toColor, shadowColor }) => (
+              <span
+                key={editorName}
+                className={`bg-gradient-to-r ${fromColor} ${toColor} text-white px-6 py-3 rounded-full text-lg font-semibold hover:scale-105 transition-all transform cursor-pointer shadow-lg ${shadowColor}`}
+              >
+                {editorName} {status === "Learning" ? `(${status})` : ""}
+              </span>
+            )
+          )}
         </div>
       </section>
 
